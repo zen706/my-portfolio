@@ -1,11 +1,13 @@
 const links = [
-  { label: 'git hub', 
-  icon: "<i class='bi bi-github'></i>",
-   url: 'https://github.com/IsTaro' },
+  {
+    label: 'git hub',
+    icon: "<i class='bi bi-github'></i>",
+    url: 'https://github.com/IsTaro',
+  },
   {
     label: 'twitter',
     icon: "<i class='bi bi-twitter'></i>",
-    url: 'https://twitter.com/john_smith1253',
+    url: 'https://twitter.com/Shotaro521',
   },
   {
     label: 'email',
