@@ -157,13 +157,13 @@ footer.children[0].innerHTML = links.map(item => {
 const ul = document.createElement("ul")
 submenu.appendChild(ul).innerHTML = data.map(item => {
   const {title, url} = item
-  return `<a href={url}><li>${title}</li></a>`
+  return `<a href=${url}><li>${title}</li></a>`
 }).join("")
 
 sidebar.children[1].children[0].innerHTML = data
   .map((item) => {
     const { title, url } = item
-    return `<a href={url}><li>${title}</li></a>`
+    return `<a href=${url}><li>${title}</li></a>`
   })
   .join('')
 
