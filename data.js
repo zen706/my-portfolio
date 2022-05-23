@@ -1,6 +1,6 @@
 const links = [
   {
-    label: 'git hub',
+    label: 'gitHub',
     icon: "<i class='bi bi-github'></i>",
     url: 'https://github.com/IsTaro',
   },
@@ -24,7 +24,7 @@ const data = [
     title: 'random-quote-machine',
     img: './images/random-quote-machine.png',
     url: 'https://polite-centaur-eab977.netlify.app/',
-    difficulty: '',
+    difficulty: '2',
     desc: '',
   },
   {
@@ -70,11 +70,11 @@ const data = [
     url: 'https://moonlit-youtiao-0892f7.netlify.app/',
   },
   {
-    id: 4,
+    id: 8,
     category: 'vanilla-js',
-    title: '25clock',
-    img: './images/25clock.png',
-    url: '',
+    title: 'ecommerce-product-page',
+    img: './images/ecommerce-product-page.png',
+    url: 'https://subtle-gumption-59ff95.netlify.app/',
   },
   {
     id: 4,
