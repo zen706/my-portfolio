@@ -23,7 +23,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
 })
 
-
 function displayCategoryBtns() {
   const categoriesContainer = document.querySelector('.categories-container')
   categoriesContainer.innerHTML = categories
@@ -95,7 +94,7 @@ function displayPortfolio(dataItems) {
   } else {
     renderPortfolio()
   }
-  
+
   // generatle class title, then
   const titles = document.querySelectorAll('.title')
   // with every call, titles mutates.therefore,  update addEventListener ever time
@@ -121,7 +120,7 @@ menuBtn.addEventListener('mouseover', (e) => {
   const menuBtnRect = e.target.getBoundingClientRect()
   log(menuBtnRect)
   const center = (menuBtnRect.left + menuBtnRect.right) / 2
-  const bottom = menuBtnRect.bottom  
+  const bottom = menuBtnRect.bottom
   log(submenu.style.left)
   submenu.style.left = `${center}px`
   submenu.style.top = `${bottom}px`
@@ -172,9 +171,3 @@ sidebar.children[1].children[1].innerHTML = links.map(item => {
   const { icon, url } = item
   return `<li><a href=${url} target="_blank">${icon}</a></li>`
 }).join("")
-
-
-
-
-
-
