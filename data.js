@@ -23,7 +23,7 @@ const data = [
     category: 'react',
     title: 'random-quote-machine',
     img: './images/random-quote-machine.png',
-    url: 'https://polite-centaur-eab977.netlify.app/',
+    url: 'https://istaro.github.io/react-app-random-quote-machine/',
     difficulty: '2',
     desc: '',
   },
