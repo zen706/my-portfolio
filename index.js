@@ -59,11 +59,15 @@ function displayPortfolio(dataItems) {
   const renderPortfolio = (className="") => {
     imgContainer.innerHTML = dataItems
       .map((item) => {
-        const { id, category, title, img, url } = item
+        const { id, category, title, img, url,difficulty } = item
+        let star=""
+        for(let i=0;i<difficulty;i++){
+          star +="★"
+        }
         return `<article key=${id} id=${category}>
             <a href=${url}>
               <img src=${img} alt=${title} />
-              <p class=${`title ${className}`}>${title}</p>
+              <p class=${`title ${className}`}>${title}<span class="star">${star}</span></p>
             </a>
         </article>`
       })
@@ -71,6 +75,7 @@ function displayPortfolio(dataItems) {
       // log(className)
   }
   const article = imgContainer.firstChild
+  // if initial render success
   if (article) {
     const title = document.querySelector('.title')
     // log(title)
@@ -78,16 +83,21 @@ function displayPortfolio(dataItems) {
       // renderPortfolio("dark")
       imgContainer.innerHTML = dataItems
         .map((item) => {
-          const { id, category, title, img, url } = item
+          const { id, category, title, img, url ,difficulty} = item
+          let star = ''
+          for (let i = 0; i < difficulty; i++) {
+            star += '★'
+          }
           return `<article key=${id} id=${category}>
             <a href=${url}>
               <img src=${img} alt=${title} />
-              <p class="title dark">${title}</p>
+              <p class="title dark">${title}<span class="star">${star}</span></p>
             </a>
         </article>`
         })
         .join('')
         // only one class acepted on the <p> tag in variable
+       
     } else {
       renderPortfolio()
     }
