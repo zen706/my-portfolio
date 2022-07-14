@@ -117,17 +117,19 @@ const data = [
   },
   {
     id: 13,
-    category: 'clone-site',
-    title: '25clock',
-    img: './images/25clock.png',
-    url: '',
+    category: 'react',
+    title: 'to do list',
+    img: './images/to-do-list.png',
+    url: 'https://istaro.github.io/to-do-list/',
+    difficulty: 3,
   },
   {
     id: 14,
-    category: 'clone-site',
-    title: '25clock',
-    img: './images/25clock.png',
-    url: '',
+    category: 'react',
+    title: 'wikipedia viewer',
+    img: './images/wikipedia-viewer.png',
+    url: 'https://istaro.github.io/wikipedia-viewer/',
+    difficulty: 3,
   },
 ]
 
