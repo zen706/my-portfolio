@@ -12,7 +12,7 @@ const links = [
   {
     label: 'email',
     icon: "<i class='bi bi-envelope'></i>",
-    url: 'mailto:breaksoulgoodmanppl7@gmail.com',
+    url: 'mailto:learn42317@gmail.com',
   },
 ]
 
@@ -115,16 +115,16 @@ const data = [
     url: 'https://glittering-bonbon-800429.netlify.app/',
     difficulty: 3,
   },
+  // {
+  //   id: 13,
+  //   category: 'react',
+  //   title: 'to do list',
+  //   img: './images/to-do-list.png',
+  //   url: 'https://istaro.github.io/to-do-list/',
+  //   difficulty: 3,
+  // },
   {
     id: 13,
-    category: 'react',
-    title: 'to do list',
-    img: './images/to-do-list.png',
-    url: 'https://istaro.github.io/to-do-list/',
-    difficulty: 3,
-  },
-  {
-    id: 14,
     category: 'react',
     title: 'wikipedia viewer',
     img: './images/wikipedia-viewer.png',
