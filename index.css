@@ -144,7 +144,6 @@ p {
   margin: 0 auto;
   margin-top: 50px;
   max-width: 1200px;
-  /* carefully adjusted */
   min-height: calc(100vh - 196px);
   margin-bottom: 50px;
 }
