@@ -7,7 +7,7 @@ const links = [
   {
     label: 'twitter',
     icon: "<i class='bi bi-twitter'></i>",
-    url: 'https://twitter.com/shotaro191',
+    url: 'https://twitter.com/zen45153',
   },
   {
     label: 'email',
