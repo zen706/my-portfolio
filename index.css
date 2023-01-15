@@ -206,13 +206,28 @@ img {
 }
 .title {
   color: #000;
-  margin-top: 0.25rem;
+  margin-top: 1rem;
+  font-weight: 700;
 }
 .title.dark {
   color: #eee;
 }
 .star {
   margin-left:1rem; 
+}
+.code-url{
+  display: block;  
+  margin-top:0.25rem;
+  padding: 0.5rem;
+  text-transform:none;
+  border-radius:1rem;
+  color: #888;
+  border:1px solid transparent;
+  transition: 0.5s all;
+}
+.code-url:hover{
+  border:1px solid #888;
+  opacity: 0.7;
 }
 
 /* footer */

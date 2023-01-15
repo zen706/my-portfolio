@@ -16,7 +16,6 @@ const links = [
   },
 ]
 
-
 const data = [
   {
     id: 1,
@@ -24,6 +23,7 @@ const data = [
     title: 'random quote machine',
     img: './images/random-quote-machine.png',
     url: 'https://istaro.github.io/react-app-random-quote-machine/',
+    codeUrl: 'https://github.com/IsTaro/react-app-random-quote-machine',
     difficulty: 2,
     desc: '',
   },
@@ -33,6 +33,7 @@ const data = [
     title: 'drum machine',
     img: './images/drum-machine.png',
     url: 'https://unrivaled-treacle-461848.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/drum-machine',
     difficulty: 3,
   },
   {
@@ -41,6 +42,7 @@ const data = [
     title: 'calculator',
     img: './images/calculator.png',
     url: 'https://tranquil-beignet-155758.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/react-app-calculator',
     difficulty: 3,
   },
   {
@@ -49,6 +51,7 @@ const data = [
     title: '25clock',
     img: './images/25clock.png',
     url: 'https://sprightly-taiyaki-f87361.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/25-5-clock',
     difficulty: 3,
   },
   {
@@ -57,6 +60,7 @@ const data = [
     title: 'markdown previewwer',
     img: './images/markdown-previewwer.png',
     url: 'https://vocal-biscotti-540ef9.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/markdown-previewer',
     difficulty: 2,
   },
   {
@@ -65,6 +69,7 @@ const data = [
     title: 'interactive rating component',
     img: './images/interactive-rating-component.png',
     url: 'https://celebrated-pika-e69aaf.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/interactive-rating-component-main',
     difficulty: 1,
   },
   {
@@ -73,6 +78,7 @@ const data = [
     title: 'launch countdown timer',
     img: './images/launch-countdown-timer.png',
     url: 'https://moonlit-youtiao-0892f7.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/launch-countdown-timer',
     difficulty: 3,
   },
   {
@@ -81,6 +87,7 @@ const data = [
     title: 'ecommerce product page',
     img: './images/ecommerce-product-page.png',
     url: 'https://subtle-gumption-59ff95.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/ecommerce-product-page',
     difficulty: 3,
   },
   {
@@ -89,6 +96,7 @@ const data = [
     title: 'ip address tracker',
     img: './images/ip-address-tracker.png',
     url: 'https://chic-caramel-a9b91e.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/ip-address-tracker',
     difficulty: 3,
   },
   {
@@ -97,6 +105,7 @@ const data = [
     title: 'show the local weather',
     img: './images/show-the-local-weather.png',
     url: 'https://thunderous-travesseiro-456d5b.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/show-the-local-weather',
     difficulty: 2,
   },
   {
@@ -105,6 +114,7 @@ const data = [
     title: 'clone ableton',
     img: './images/clone-ableton.png',
     url: 'https://genuine-gnome-9a8333.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/clone-ableton',
     difficulty: 4,
   },
   {
@@ -113,6 +123,7 @@ const data = [
     title: 'clone backstage talks',
     img: './images/clone-backstage-talks.png',
     url: 'https://glittering-bonbon-800429.netlify.app/',
+    codeUrl: 'https://github.com/IsTaro/clone-backstage-talks',
     difficulty: 3,
   },
   // {
@@ -121,6 +132,7 @@ const data = [
   //   title: 'to do list',
   //   img: './images/to-do-list.png',
   //   url: 'https://istaro.github.io/to-do-list/',
+  // codeUrl:'https://github.com/IsTaro/to-do-list',
   //   difficulty: 3,
   // },
   {
@@ -129,6 +141,7 @@ const data = [
     title: 'wikipedia viewer',
     img: './images/wikipedia-viewer.png',
     url: 'https://istaro.github.io/wikipedia-viewer/',
+    codeUrl: 'https://github.com/IsTaro/wikipedia-viewer',
     difficulty: 3,
   },
 ]
