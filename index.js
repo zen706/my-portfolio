@@ -1,4 +1,4 @@
-import {data, links} from './data.js'
+import { data, links } from './data.js'
 const { log } = console
 
 const categories = ['all', ...new Set(data.map((item) => item.category))]
@@ -20,7 +20,6 @@ const footer = document.querySelector('footer')
 window.addEventListener('DOMContentLoaded', () => {
   displayPortfolio(data)
   displayCategoryBtns()
-
 })
 
 function displayCategoryBtns() {
@@ -34,12 +33,12 @@ function displayCategoryBtns() {
   const categoryBtns = document.querySelectorAll('.category-btn')
   main.addEventListener('click', (e) => {
     const category = e.target.dataset.id
-    if(category) {
-      categoryBtns.forEach(btn => {
+    if (category) {
+      categoryBtns.forEach((btn) => {
         btn.classList.remove('active')
       })
       e.target.classList.add('active')
-      if(category === 'all') {
+      if (category === 'all') {
         displayPortfolio(data)
         return
       }
@@ -56,23 +55,25 @@ function displayCategoryBtns() {
 }
 function displayPortfolio(dataItems) {
   const imgContainer = document.querySelector('.img-container')
-  const renderPortfolio = (className="") => {
+  const renderPortfolio = (className = '') => {
     imgContainer.innerHTML = dataItems
       .map((item) => {
-        const { id, category, title, img, url,difficulty } = item
-        let star=""
-        for(let i=0;i<difficulty;i++){
-          star +="★"
+        const { id, category, title, img, url, difficulty ,codeUrl} = item
+        let star = ''
+        for (let i = 0; i < difficulty; i++) {
+          star += '★'
         }
         return `<article key=${id} id=${category}>
             <a href=${url}>
               <img src=${img} alt=${title} />
               <p class=${`title ${className}`}>${title}<span class="star">${star}</span></p>
             </a>
+            <a href=${codeUrl} class='code-url'>View the code</a>
+            
         </article>`
       })
       .join('')
-      // log(className)
+    // log(className)
   }
   const article = imgContainer.firstChild
   // if initial render success
@@ -83,7 +84,7 @@ function displayPortfolio(dataItems) {
       // renderPortfolio("dark")
       imgContainer.innerHTML = dataItems
         .map((item) => {
-          const { id, category, title, img, url ,difficulty} = item
+          const { id, category, title, img, url, difficulty ,codeUrl} = item
           let star = ''
           for (let i = 0; i < difficulty; i++) {
             star += '★'
@@ -93,11 +94,11 @@ function displayPortfolio(dataItems) {
               <img src=${img} alt=${title} />
               <p class="title dark">${title}<span class="star">${star}</span></p>
             </a>
+            <a href=${codeUrl} class='code-url'>View the code</a>
         </article>`
         })
         .join('')
-        // only one class acepted on the <p> tag in variable
-       
+      // only one class acepted on the <p> tag in variable
     } else {
       renderPortfolio()
     }
@@ -136,7 +137,6 @@ menuBtn.addEventListener('mouseover', (e) => {
   submenu.style.top = `${bottom}px`
   log(submenu.style.left)
   submenu.classList.add('show')
-
 })
 nav.addEventListener('mouseover', (e) => {
   if (!e.target.classList.contains('menu-btn')) {
@@ -146,29 +146,46 @@ nav.addEventListener('mouseover', (e) => {
 main.addEventListener('mouseover', (e) => {
   submenu.classList.remove('show')
 })
-sidebarBtn.addEventListener('click', ()=> {
+sidebarBtn.addEventListener('click', (e) => {
+  // stop bodyEvent
+  e.stopPropagation()
+
   sidebar.classList.toggle('show')
+
 })
 closeBtn.addEventListener('click', () => {
   sidebar.classList.remove('show')
 })
+sidebar.addEventListener('click',(e)=>{
+  // stop bodyEvent
+  e.stopPropagation()
+})
+body.addEventListener('click',()=>{
+  sidebar.classList.remove('show')
+})
 
 // render elements
-navLinks.innerHTML = links.map(item => {
-  const { icon, url} = item
-  return `<li><a href=${url} target="_blank">${icon}</a></li>`
-}).join("")
+navLinks.innerHTML = links
+  .map((item) => {
+    const { icon, url } = item
+    return `<li><a href=${url} target="_blank">${icon}</a></li>`
+  })
+  .join('')
 
-footer.children[0].innerHTML = links.map(item => {
-  const {label, url} = item
-  return `<li><a href=${url} target="_blank">${label}</a></li>`
-}).join("")
+footer.children[0].innerHTML = links
+  .map((item) => {
+    const { label, url } = item
+    return `<li><a href=${url} target="_blank">${label}</a></li>`
+  })
+  .join('')
 
-const ul = document.createElement("ul")
-submenu.appendChild(ul).innerHTML = data.map(item => {
-  const {title, url} = item
-  return `<a href=${url}><li>${title}</li></a>`
-}).join("")
+const ul = document.createElement('ul')
+submenu.appendChild(ul).innerHTML = data
+  .map((item) => {
+    const { title, url } = item
+    return `<a href=${url}><li>${title}</li></a>`
+  })
+  .join('')
 
 sidebar.children[1].children[0].innerHTML = data
   .map((item) => {
@@ -177,7 +194,9 @@ sidebar.children[1].children[0].innerHTML = data
   })
   .join('')
 
-sidebar.children[1].children[1].innerHTML = links.map(item => {
-  const { icon, url } = item
-  return `<li><a href=${url} target="_blank">${icon}</a></li>`
-}).join("")
+sidebar.children[1].children[1].innerHTML = links
+  .map((item) => {
+    const { icon, url } = item
+    return `<li><a href=${url} target="_blank">${icon}</a></li>`
+  })
+  .join('')
