@@ -144,6 +144,104 @@ const data = [
     codeUrl: 'https://github.com/IsTaro/wikipedia-viewer',
     difficulty: 3,
   },
+  {
+    id: 14,
+    category: 'node.js',
+    title: 'timestamp microservice',
+    img: './images/timestamp-microservice.png',
+    url: 'https://boilerplate-project-timestamp.johnsmith217.repl.co/',
+    codeUrl: 'https://replit.com/@johnsmith217/boilerplate-project-timestamp',
+    difficulty: 1,
+  },
+  {
+    id: 15,
+    category: 'node.js',
+    title: 'Request Header Parser Microservice',
+    img: './images/request-header-parser-microservice.png',
+    url: 'https://boilerplate-project-headerparser.johnsmith217.repl.co/',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-headerparser',
+    difficulty: 1,
+  },
+  {
+    id: 16,
+    category: 'node.js',
+    title: 'URL Shortener Microservice',
+    img: './images/URL-shortener-microservice.png',
+    url: 'https://boilerplate-project-urlshortener.johnsmith217.repl.co/',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-urlshortener',
+    difficulty: 1,
+  },
+  {
+    id: 17,
+    category: 'node.js',
+    title: 'Exercise Tracker',
+    img: './images/exercise-tracker.png',
+    url: 'https://boilerplate-project-exercisetracker.johnsmith217.repl.co/',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-exercisetracker',
+    difficulty: 3,
+  },
+  {
+    id: 18,
+    category: 'node.js',
+    title: 'File Metadata Microservice',
+    img: './images/file-metadata-microservice.png',
+    url: 'https://boilerplate-project-filemetadata.johnsmith217.repl.co/',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-filemetadata',
+    difficulty: 1,
+  },
+  {
+    id: 19,
+    category: 'node.js',
+    title: 'Metric Imperial Converter',
+    img: './images/metric-imperial-converter.png',
+    url: 'https://boilerplate-project-metricimpconverter.johnsmith217.repl.co/',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-metricimpconverter',
+    difficulty: 3,
+  },
+  {
+    id: 20,
+    category: 'node.js',
+    title: 'Issue Tracker',
+    img: './images/issue-tracker.png',
+    url: 'https://boilerplate-project-issuetracker.johnsmith217.repl.co/',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-issuetracker',
+    difficulty: 5,
+  },
+  {
+    id: 21,
+    category: 'node.js',
+    title: 'Personal Library',
+    img: './images/personal-library.png',
+    url: 'https://boilerplate-project-library.johnsmith217.repl.co',
+    codeUrl: 'https://replit.com/@johnsmith217/boilerplate-project-library',
+    difficulty: 3,
+  },
+  {
+    id: 22,
+    category: 'node.js',
+    title: 'Sudoku Solver',
+    img: './images/sudoku-solver.png',
+    url: 'https://boilerplate-project-sudoku-solver.johnsmith217.repl.co',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-sudoku-solver',
+    difficulty: 4,
+  },
+  {
+    id: 23,
+    category: 'node.js',
+    title: 'American British Translator',
+    img: './images/american-british-translator.png',
+    url: 'https://boilerplate-project-american-british-english-translator.johnsmith217.repl.co',
+    codeUrl:
+      'https://replit.com/@johnsmith217/boilerplate-project-american-british-english-translator',
+    difficulty: 5,
+  },
 ]
 
 export { data, links }

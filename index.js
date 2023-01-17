@@ -180,6 +180,8 @@ footer.children[0].innerHTML = links
   .join('')
 
 const ul = document.createElement('ul')
+
+// projects list
 submenu.appendChild(ul).innerHTML = data
   .map((item) => {
     const { title, url } = item
