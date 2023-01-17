@@ -1,7 +1,7 @@
 import { data, links } from './data.js'
 const { log } = console
 
-const categories = ['all', ...new Set(data.map((item) => item.category))]
+const categories = ['All', ...new Set(data.map((item) => item.category))]
 log(categories)
 
 const darkModeBtn = document.querySelector('.darkMode-box')
@@ -38,7 +38,7 @@ function displayCategoryBtns() {
         btn.classList.remove('active')
       })
       e.target.classList.add('active')
-      if (category === 'all') {
+      if (category.toLowerCase() === 'all') {
         displayPortfolio(data)
         return
       }
@@ -58,18 +58,18 @@ function displayPortfolio(dataItems) {
   const renderPortfolio = (className = '') => {
     imgContainer.innerHTML = dataItems
       .map((item) => {
-        const { id, category, title, img, url, difficulty ,codeUrl} = item
+        const { id, category, title, img, url, difficulty ,codeUrl,desc} = item
         let star = ''
         for (let i = 0; i < difficulty; i++) {
           star += '★'
         }
         return `<article key=${id} id=${category}>
-            <a href=${url}>
+            <a href=${url} class="project-link">
               <img src=${img} alt=${title} />
               <p class=${`title ${className}`}>${title}<span class="star">${star}</span></p>
             </a>
-            <a href=${codeUrl} class='code-url'>View the code</a>
-            
+            <p class="desc">${desc}<p>
+            <a href=${codeUrl} class='code-url'>View the code</a>          
         </article>`
       })
       .join('')
@@ -84,16 +84,17 @@ function displayPortfolio(dataItems) {
       // renderPortfolio("dark")
       imgContainer.innerHTML = dataItems
         .map((item) => {
-          const { id, category, title, img, url, difficulty ,codeUrl} = item
+          const { id, category, title, img, url, difficulty ,codeUrl,desc} = item
           let star = ''
           for (let i = 0; i < difficulty; i++) {
             star += '★'
           }
           return `<article key=${id} id=${category}>
-            <a href=${url}>
+            <a href=${url} class="project-link">
               <img src=${img} alt=${title} />
               <p class="title dark">${title}<span class="star">${star}</span></p>
             </a>
+            <p class="desc">${desc}<p>
             <a href=${codeUrl} class='code-url'>View the code</a>
         </article>`
         })
