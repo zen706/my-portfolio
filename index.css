@@ -59,6 +59,7 @@ p {
   width: 100vw;
   position: fixed;
   top: 0;
+  z-index:99;
 }
 .nav a {
   color: #eee;
@@ -198,11 +199,9 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
-article:hover {
-  /* opacity: 0.8; */
-}
 .project-link:hover{
   opacity:0.9;
+  
 }
 img {
   width: 100%;
