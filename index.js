@@ -128,17 +128,19 @@ darkModeBtn.addEventListener('click', () => {
   //can't grab title or category here
 })
 
-menuBtn.addEventListener('mouseover', (e) => {
-  const menuBtnRect = e.target.getBoundingClientRect()
-  log(menuBtnRect)
-  const center = (menuBtnRect.left + menuBtnRect.right) / 2
-  const bottom = menuBtnRect.bottom
-  log(submenu.style.left)
-  submenu.style.left = `${center}px`
-  submenu.style.top = `${bottom}px`
-  log(submenu.style.left)
-  submenu.classList.add('show')
-})
+// tentative
+// menuBtn.addEventListener('mouseover', (e) => {
+//   const menuBtnRect = e.target.getBoundingClientRect()
+//   log(menuBtnRect)
+//   const center = (menuBtnRect.left + menuBtnRect.right) / 2
+//   const bottom = menuBtnRect.bottom
+//   log(submenu.style.left)
+//   submenu.style.left = `${center}px`
+//   submenu.style.top = `${bottom}px`
+//   log(submenu.style.left)
+//   submenu.classList.add('show')
+// })
+
 nav.addEventListener('mouseover', (e) => {
   if (!e.target.classList.contains('menu-btn')) {
     submenu.classList.remove('show')
@@ -182,13 +184,13 @@ footer.children[0].innerHTML = links
 
 const ul = document.createElement('ul')
 
-// projects list
-submenu.appendChild(ul).innerHTML = data
-  .map((item) => {
-    const { title, url } = item
-    return `<a href=${url}><li>${title}</li></a>`
-  })
-  .join('')
+// tentative
+// submenu.appendChild(ul).innerHTML = links
+//   .map(item=>{
+//     const { icon, url } = item
+//     return `<li><a href=${url} target="_blank">${icon}</a></li>`
+//   })
+//   .join('')
 
 sidebar.children[1].children[0].innerHTML = data
   .map((item) => {
