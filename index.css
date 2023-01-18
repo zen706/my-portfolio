@@ -23,9 +23,18 @@ body {
   overflow-x: hidden;
   transition: all 0.5s;
 }
+
 body.dark {
   background-color: var(--clr-darkMode);
   color: #eee;
+}
+
+body.dark a {
+  background-color: var(--clr-darkMode);
+  color: #eee;
+}
+body.dark .code-url{
+  color: #888;
 }
 
 ul {
@@ -34,6 +43,8 @@ ul {
 
 a {
   text-decoration: none;
+  color: #000;
+
 }
 p {
 }
@@ -199,6 +210,7 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
+
 .project-link:hover{
   opacity:0.9;
   
@@ -209,13 +221,14 @@ img {
   box-shadow: 5px 5px 5px #000;
 }
 .title {
-  color: #000;
+  /* color: #000; */
   padding: 0.5rem;
   font-weight: 700;
 }
 .title.dark {
-  color: #eee;
+  /* color: #eee; */
 }
+
 .star {
   margin-left:1rem; 
 }
@@ -227,11 +240,12 @@ img {
   border-radius:1rem;
   color: #888;
   border:1px solid transparent;
-  transition: 0.5s all;
+  /* transition: 0.5s all; */
 }
 .code-url:hover{
   border:1px solid #888;
   opacity: 0.7;
+  transition: 0.5s all;
 }
 .desc{
   font-size: 0.75rem;

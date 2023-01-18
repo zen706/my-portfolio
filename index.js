@@ -53,9 +53,10 @@ function displayCategoryBtns() {
     })
   })
 }
+
 function displayPortfolio(dataItems) {
   const imgContainer = document.querySelector('.img-container')
-  const renderPortfolio = (className = '') => {
+  const renderPortfolio = () => {
     imgContainer.innerHTML = dataItems
       .map((item) => {
         const { id, category, title, img, url, difficulty ,codeUrl,desc} = item
@@ -66,57 +67,85 @@ function displayPortfolio(dataItems) {
         return `<article key=${id} id=${category}>
             <a href=${url} class="project-link">
               <img src=${img} alt=${title} />
-              <p class=${`title ${className}`}>${title}<span class="star">${star}</span></p>
+              <p class="title">${title}<span class="star">${star}</span></p>
             </a>
             <p class="desc">${desc}<p>
             <a href=${codeUrl} class='code-url'>View the code</a>          
         </article>`
       })
       .join('')
-    // log(className)
   }
-  const article = imgContainer.firstChild
+  renderPortfolio()
+  
+  // cut codes replaced with css
+  
+  // const article = imgContainer.firstChild
+  // const renderPortfolio = (className="") => {
+  //   imgContainer.innerHTML = dataItems
+  //     .map((item) => {
+  //       const { id, category, title, img, url, difficulty ,codeUrl,desc} = item
+  //       let star = ''
+  //       for (let i = 0; i < difficulty; i++) {
+  //         star += '★'
+  //       }
+  //       return `<article key=${id} id=${category}>
+  //           <a href=${url} class="project-link">
+  //             <img src=${img} alt=${title} />
+  //             <p class=${`title ${className}`}>${title}<span class="star">${star}</span></p>
+  //           </a>
+  //           <p class="desc">${desc}<p>
+  //           <a href=${codeUrl} class='code-url'>View the code</a>          
+  //       </article>`
+  //     })
+  //     .join('')
+  // }
+
   // if initial render success
-  if (article) {
-    const title = document.querySelector('.title')
+  // if (article) {
+      // renderPortfolio()
+    // const title = document.querySelector('.title')
     // log(title)
-    if (title.classList.contains('dark')) {
-      // renderPortfolio("dark")
-      imgContainer.innerHTML = dataItems
-        .map((item) => {
-          const { id, category, title, img, url, difficulty ,codeUrl,desc} = item
-          let star = ''
-          for (let i = 0; i < difficulty; i++) {
-            star += '★'
-          }
-          return `<article key=${id} id=${category}>
-            <a href=${url} class="project-link">
-              <img src=${img} alt=${title} />
-              <p class="title dark">${title}<span class="star">${star}</span></p>
-            </a>
-            <p class="desc">${desc}<p>
-            <a href=${codeUrl} class='code-url'>View the code</a>
-        </article>`
-        })
-        .join('')
+    // if (title.classList.contains('dark')) {
+
+    //   renderPortfolio("dark")
+      // imgContainer.innerHTML = dataItems
+      //   .map((item) => {
+      //     const { id, category, title, img, url, difficulty ,codeUrl,desc} = item
+      //     let star = ''
+      //     for (let i = 0; i < difficulty; i++) {
+      //       star += '★'
+      //     }
+      //     return `<article key=${id} id=${category}>
+      //       <a href=${url} class="project-link">
+      //         <img src=${img} alt=${title} />
+      //         <p class="title dark">${title}<span class="star">${star}</span></p>
+      //       </a>
+      //       <p class="desc">${desc}<p>
+      //       <a href=${codeUrl} class='code-url'>View the code</a>
+      //   </article>`
+      //   })
+      //   .join('')
       // only one class acepted on the <p> tag in variable
-    } else {
-      renderPortfolio()
-    }
-  } else {
-    renderPortfolio()
-  }
+    // } else {
+    //   renderPortfolio()
+    // }
+  // } else {
+    // renderPortfolio()
+  // }
 
   // generatle class title, then
-  const titles = document.querySelectorAll('.title')
+  // const titles = document.querySelectorAll('.title')
   // with every call, titles mutates.therefore,  update addEventListener ever time
 
-  darkModeBtn.addEventListener('click', () => {
-    titles.forEach((title) => {
-      title.classList.toggle('dark')
-    })
-    log(titles)
-  })
+  // darkModeBtn.addEventListener('click', () => {
+  //   log(titles)
+  //   titles.forEach((title) => {
+  //     title.classList.toggle('dark')
+  //   })
+  //   log(titles)
+  // })
+
+
 }
 
 // eventListener
