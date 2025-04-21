@@ -2,17 +2,17 @@ const links = [
   {
     label: 'gitHub',
     icon: "<i class='bi bi-github'></i>",
-    url: 'https://github.com/IsTaro',
+    url: 'https://github.com/zen706',
   },
   {
     label: 'twitter',
     icon: "<i class='bi bi-twitter'></i>",
-    url: 'https://twitter.com/zen45153',
+    url: '',
   },
   {
     label: 'email',
     icon: "<i class='bi bi-envelope'></i>",
-    url: 'mailto:learn42317@gmail.com',
+    url: '',
   },
 ]
 
@@ -272,7 +272,7 @@ const data = [
     img: './images/my-portfolio.png',
     url: 'https://brilliant-selkie-3f8562.netlify.app/',
     codeUrl:
-      'https://github.com/IsTaro/my-portfolio',
+      'https://github.com/zen706/my-portfolio',
     difficulty: 3,
     desc:"my portfolio.",
   },
